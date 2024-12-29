@@ -7,12 +7,21 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 		<style>
-			/* Add this CSS to adjust the layout to 3 columns */
+			/* Increase the content width to allow more space for the columns */
+			#main {
+				width: 85%; /* Adjust the width to make the content area wider */
+				margin: 0 auto;
+			}
+
+			/* Adjust the grid layout to have 3 columns */
 			.posts {
 				display: grid;
 				grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
 				gap: 20px;
+				width: 100%;
 			}
+
+			/* Styling for individual posts */
 			.posts article {
 				background: #fff;
 				padding: 20px;
@@ -20,14 +29,19 @@
 				box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 				transition: transform 0.3s;
 			}
+
 			.posts article:hover {
 				transform: translateY(-10px);
 			}
+
+			/* Adjust for medium screens */
 			@media (max-width: 1200px) {
 				.posts {
 					grid-template-columns: repeat(2, 1fr); /* 2 columns for medium screens */
 				}
 			}
+
+			/* Adjust for small screens */
 			@media (max-width: 768px) {
 				.posts {
 					grid-template-columns: 1fr; /* 1 column for small screens */
