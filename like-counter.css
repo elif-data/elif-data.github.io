@@ -11,3 +11,24 @@
 .liked {
   font-weight: bold;
 }
+
+
+/* Add this to your main.css to style the three-column layout */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.col-4 {
+  flex: 1 1 30%; /* This sets each column to take up 30% of the width */
+  max-width: 33%;
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  .col-4 {
+    flex: 1 1 100%; /* Stack the columns on smaller screens */
+    max-width: 100%;
+  }
+}
